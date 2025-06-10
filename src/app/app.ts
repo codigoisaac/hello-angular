@@ -5,12 +5,20 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   template: `
-    <h1>Welcome to {{title}}!</h1>
+    <h1>Hello, {{ title }}!</h1>
+
+    <p>Let's do it!</p>
 
     <router-outlet />
   `,
-  styles: [],
+  styles: [
+    `
+      p {
+        background: red;
+      }
+    `,
+  ],
 })
 export class App {
-  protected title = 'first-ng-app';
+  protected title = 'Angular';
 }

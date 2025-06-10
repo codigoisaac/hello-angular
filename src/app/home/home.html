@@ -1,7 +1,11 @@
 <p>Feel yourself at home ;)</p>
 
-<app-greeting [message]="message()" />
+<app-greeting [message]="message()" message1="oklezgo" />
 
-<app-greeting message="Lezduit." />
+<input
+  placeholder="Type something, dear."
+  type="text"
+  (keyup)="handleKeyUp($event)"
+/>
 
-<input type="text" (keyup)="handleKeyUp($event)" />
+<app-counter />

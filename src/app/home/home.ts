@@ -9,4 +9,8 @@ import { Greeting } from '../components/greeting/greeting';
 })
 export class Home {
   message = signal('Passed this message from Home to Greeting.');
+
+  handleKeyUp(event: KeyboardEvent) {
+    console.log(`You typed ${event.key}, don't you!`);
+  }
 }

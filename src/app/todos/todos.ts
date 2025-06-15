@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { TodoService } from '../services/todos';
 
 @Component({
   selector: 'app-todos',
   imports: [],
   templateUrl: './todos.html',
-  styleUrl: './todos.scss'
+  styleUrl: './todos.scss',
 })
-export class Todos {
+export class Todos implements OnInit {
+  todoService = inject(TodoService);
 
+  ngOnInit(): void {
+    console.log('fu', this.todoService.todoItems);
+  }
 }
